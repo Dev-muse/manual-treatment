@@ -4,7 +4,9 @@ import Remedies from "./_components/Remedies";
 import Testimonial from "@/app/_components/testimonials";
 import Reviews from "@/app/_components/ui/Reviews";
 import FAQs from "@/app/_components/FAQs";
+import CTA from "@/app/_components/CTA";
 import Footer from "@/app/_components/Footer";
+
 export default function Home() {
   return (
     <>
@@ -12,6 +14,7 @@ export default function Home() {
       <Remedies />
       <Clients />
       <FAQs />
+      <CTA />
       <Footer />
     </>
   );
