@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "./_components/Navbar";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Footer from "./_components/Footer";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -31,6 +32,7 @@ export default function RootLayout({
       <body className={`${playfair.variable}  ${poppins.variable} font-sans`}>
         <Navbar />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

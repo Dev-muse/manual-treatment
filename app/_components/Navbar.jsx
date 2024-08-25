@@ -4,6 +4,7 @@ import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/16/solid";
 import Link from "next/link";
 import { useState } from "react";
+import { FiArrowRight, FiArrowUpRight } from "react-icons/fi";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -51,12 +52,12 @@ const Navbar = () => {
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a
-              href="#"
-              className="text-sm font-semibold leading-6 text-white bg-orange-600 rounded-md px-4 py-2"
+            <Link
+              href="/book"
+              className="text-sm flex items-center gap-2 font-semibold leading-6 text-white bg-orange-600 rounded-md px-4 py-2"
             >
-              Get Started<span aria-hidden="true"> &rarr;</span>
-            </a>
+              Get Started <FiArrowRight size={25} />
+            </Link>
           </div>
         </nav>
         <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
