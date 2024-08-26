@@ -21,7 +21,7 @@ const Clients = () => {
             We&apos;re trusted by over 500 patients who now live a more pain
             free life thanks to manual treatment
           </p>
-          <BookButton />
+          <BookButton dark={false} />
         </div>
       </div>
       <Testimonial />

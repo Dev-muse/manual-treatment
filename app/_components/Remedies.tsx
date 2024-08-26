@@ -1,7 +1,5 @@
 import { FaCheck } from "react-icons/fa";
-import Slide1 from "@/public/slide1.jpg";
 import Eyebrow from "./Eyebrow";
-import BookButton from "./BookButton";
 
 const features = [
   {

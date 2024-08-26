@@ -33,7 +33,7 @@ export default function Hero() {
             rediscover your active life
           </p>
           {/* cta */}
-          <BookButton />
+          <BookButton dark={false} />
         </div>
       </div>
       <Slider />
