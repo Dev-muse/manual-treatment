@@ -100,7 +100,6 @@ export default function Remedies() {
             </video>
           </div>
         </div>
-        <BookButton dark={false} />
       </div>
     </div>
   );

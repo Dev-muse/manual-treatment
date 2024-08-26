@@ -1,16 +1,17 @@
 import React from "react";
 import Meet from "@/app/_components/Meet";
 import BookButton from "../_components/BookButton";
+import Content from "@/app/_components/Content";
 
-const page = () => {
+const About = () => {
   return (
     <section className="">
       <div className="container mx-auto">
-        <Meet />
+        <Content />
         <BookButton />
       </div>
     </section>
   );
 };
 
-export default page;
+export default About;
