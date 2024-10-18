@@ -1,23 +1,22 @@
-"use client";
+'use client';
 
-import { Dialog } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/16/solid";
-import Link from "next/link";
-import { useState } from "react";
-import { FiArrowRight, FiArrowUpRight } from "react-icons/fi";
+import { Dialog } from '@headlessui/react';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/16/solid';
+import Link from 'next/link';
+import { useState } from 'react';
+import { FiArrowRight, FiArrowUpRight } from 'react-icons/fi';
 
 const navigation = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Treatments", href: "/treatments" },
-  { name: "Blog", href: "/blog" },
+  { name: 'Home', href: '/' },
+  { name: 'About', href: '/about' },
+  { name: 'Treatments', href: '/treatments' },
 ];
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <div className="border-black shadow-md rounded-3xl py-1.5 mx-20 my-5">
-      {" "}
+      {' '}
       <div className="px-6 pt-6 lg:px-8">
         <nav className="flex items-center justify-between" aria-label="Global">
           <div className="flex lg:flex-1">
@@ -87,13 +86,13 @@ const Navbar = () => {
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
                   {navigation.map((item) => (
-                    <a
+                    <Link
                       key={item.name}
                       href={item.href}
                       className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10"
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   ))}
                 </div>
                 <div className="py-6">
