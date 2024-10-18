@@ -2,78 +2,78 @@ import {
   CloudArrowUpIcon,
   LockClosedIcon,
   ServerIcon,
-} from "@heroicons/react/20/solid";
-import Jim from "@/public/jimJackson.jpg";
-import { FaStethoscope } from "react-icons/fa6";
-import { MdOutlineHealthAndSafety } from "react-icons/md";
+} from '@heroicons/react/20/solid';
+import Jim from '@/public/jimJackson.jpg';
+import { FaStethoscope } from 'react-icons/fa6';
+import { MdOutlineHealthAndSafety } from 'react-icons/md';
 
-import Image from "next/image";
+import Image from 'next/image';
 
 const Expertise = [
   {
-    name: "Pain Management:",
+    name: 'Pain Management:',
     description:
-      "Treating chronic and acute pain conditions, including back pain, neck pain, sports injuries, and arthritis.",
+      'Treating chronic and acute pain conditions, including back pain, neck pain, sports injuries, and arthritis.',
     icon: MdOutlineHealthAndSafety,
   },
   {
-    name: "Postural Correction:",
-    description: "Addressing postural imbalances and their associated pain.",
+    name: 'Postural Correction:',
+    description: 'Addressing postural imbalances and their associated pain.',
     icon: MdOutlineHealthAndSafety,
   },
   {
-    name: "Metabolic Conditions:",
+    name: 'Metabolic Conditions:',
     description:
-      "Managing chronic inflammatory and autoimmune conditions using holistic techniques.",
+      'Managing chronic inflammatory and autoimmune conditions using holistic techniques.',
     icon: MdOutlineHealthAndSafety,
   },
   {
-    name: "Allergies:",
+    name: 'Allergies:',
     description:
-      "Utilizing osteopathic techniques, light therapy, and other modalities to address allergies.",
+      'Utilizing osteopathic techniques, light therapy, and other modalities to address allergies.',
     icon: MdOutlineHealthAndSafety,
   },
   {
-    name: "Performance Enhancement:",
+    name: 'Performance Enhancement:',
     description:
-      "Supporting athletes and individuals seeking to optimize their physical performance.",
+      'Supporting athletes and individuals seeking to optimize their physical performance.',
     icon: MdOutlineHealthAndSafety,
   },
 ];
 const Qualifications = [
   {
-    name: "Registered Neuro-Muscular Exercise Therapist",
+    name: 'Registered Neuro-Muscular Exercise Therapist',
 
     icon: FaStethoscope,
   },
   {
-    name: "Registered Joint Manipulation Therapist (Phys) (LCSP)",
+    name: 'Registered Joint Manipulation Therapist (Phys) (LCSP)',
 
     icon: FaStethoscope,
   },
   {
-    name: "Clinical Osteopathic Techniques Practitioner",
+    name: 'Clinical Osteopathic Techniques Practitioner',
 
     icon: FaStethoscope,
   },
 
   {
-    name: "Advanced Personal Training Instructor",
+    name: 'Advanced Personal Training Instructor',
 
     icon: FaStethoscope,
   },
   {
-    name: "Research Scientist in Bioscience",
+    name: 'Research Scientist in Bioscience',
 
     icon: FaStethoscope,
   },
   {
-    name: "Remedial Masseur",
+    name: 'Remedial Masseur',
 
     icon: FaStethoscope,
   },
   {
-    name: "Sports Scientist",
+    name: 'Sports Scientist',
 
     icon: FaStethoscope,
   },
@@ -125,9 +125,10 @@ export default function Content() {
               </h1>
               <p className="mt-6 text-xl leading-8 text-gray-700">
                 Jim Jackson is a dedicated healthcare professional with a unique
-                blend of expertise in osteopathy, sports science, and bioscience
-                research. His extensive experience and qualifications make him a
-                trusted authority in the field of manual therapy.
+                blend of expertise in osteopathic techniques, sports science,
+                and bioscience research. His extensive experience and
+                qualifications make him a trusted authority in the field of
+                manual therapy.
               </p>
             </div>
           </div>
@@ -173,7 +174,7 @@ export default function Content() {
                       <span>
                         <strong className="font-semibold text-gray-900">
                           {qualification.name}
-                        </strong>{" "}
+                        </strong>{' '}
                       </span>
                     </li>
                   );
@@ -201,7 +202,7 @@ export default function Content() {
                       <span>
                         <strong className="font-semibold text-gray-900">
                           {point.name}
-                        </strong>{" "}
+                        </strong>{' '}
                         {point.description}
                       </span>
                     </li>
