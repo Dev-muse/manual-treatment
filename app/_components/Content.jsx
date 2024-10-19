@@ -3,7 +3,7 @@ import {
   LockClosedIcon,
   ServerIcon,
 } from '@heroicons/react/20/solid';
-import Jim from '@/public/jimJackson.jpg';
+import Jim from '@/public/jim-Jackson-profile.jpg';
 import { FaStethoscope } from 'react-icons/fa6';
 import { MdOutlineHealthAndSafety } from 'react-icons/md';
 
