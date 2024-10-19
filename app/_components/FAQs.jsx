@@ -1,40 +1,40 @@
-"use client";
+'use client';
 
-import clsx from "clsx";
-import { useState } from "react";
-import { FaMinus, FaPlus } from "react-icons/fa";
-import { AnimatePresence, motion } from "framer-motion";
+import clsx from 'clsx';
+import { useState } from 'react';
+import { FaMinus, FaPlus } from 'react-icons/fa';
+import { AnimatePresence, motion } from 'framer-motion';
 
 const items = [
   {
-    question: "What is manual therapy?",
+    question: 'What is manual medicine?',
     answer:
-      "Manual therapy is a hands-on form of treatment that focuses on restoring the body's natural function and reducing pain. It involves techniques like massage, manipulation, and mobilization to improve mobility and alleviate discomfort.",
+      "Manual medicine is a hands-on form of treatment that focuses on restoring the body's natural function and reducing pain. It involves techniques like medical deep tissue massage,  osteopathic manipulation techniques, and mobilization to improve mobility and alleviate discomfort.",
   },
   {
-    question: "Is manual therapy painful?",
+    question: 'Is manual medicine painful?',
     answer:
-      "Manual therapy is generally a gentle and comfortable treatment. However, you may experience some temporary discomfort or soreness after a session. This is normal and should subside quickly.",
+      'manual medicine is generally a gentle and comfortable treatment. However, you may experience some temporary discomfort or soreness after a session. This is normal and should subside quickly.',
   },
   {
-    question: "How many sessions will I need?",
+    question: 'How many sessions will I need?',
     answer:
-      "The number of sessions required varies depending on the severity of your condition and your individual response to treatment.Your therapist will be able to provide you with an estimated timeline.",
+      'The number of sessions required varies depending on the severity of your condition and your individual response to treatment.Your therapist will be able to provide you with an estimated timeline.',
   },
   {
-    question: "Can manual therapy be combined with other treatments?",
+    question: 'Can manual medicine be combined with other treatments?',
     answer:
-      "Yes, manual therapy can often be effectively combined with other complementary therapies, such as physiotherapy, acupuncture, or massage.",
+      'Yes, manual medicine can often be effectively combined with other complementary therapies, such as physiotherapy, acupuncture, or massage.',
   },
   {
-    question: "Is manual therapy safe?",
+    question: 'Is manual medicine safe?',
     answer:
-      "Yes, manual therapy is generally considered safe when performed by a qualified practitioner. However, it's important to inform your therapist about any underlying health conditions or medications you are taking.",
+      "Yes, manual medicine is generally considered safe when performed by a qualified practitioner. However, it's important to inform your therapist about any underlying health conditions or medications you are taking.",
   },
   {
-    question: "What can I expect during a manual therapy session?",
+    question: 'What can I expect during a manual medicine session?',
     answer:
-      "A typical session involves a thorough assessment to identify the root cause of your pain. Your therapist will then use a variety of techniques to address the underlying issues and improve your mobility.",
+      'A typical session involves a thorough assessment to identify the root cause of your pain. Your therapist will then use a variety of techniques to address the underlying issues and improve your mobility.',
   },
 ];
 
@@ -53,7 +53,7 @@ const AccordionItem = ({ question, answer }) => {
         {isOpen && (
           <motion.div
             initial={{ marginTop: 0, opacity: 0, height: 0 }}
-            animate={{ marginTop: "16px", opacity: 1, height: "auto" }}
+            animate={{ marginTop: '16px', opacity: 1, height: 'auto' }}
             exit={{ marginTop: 0, opacity: 0, height: 0 }}
           >
             {answer}

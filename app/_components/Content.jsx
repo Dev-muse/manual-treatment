@@ -128,7 +128,7 @@ export default function Content() {
                 blend of expertise in osteopathic techniques, sports science,
                 and bioscience research. His extensive experience and
                 qualifications make him a trusted authority in the field of
-                manual therapy.
+                manual medicine.
               </p>
             </div>
           </div>
@@ -147,9 +147,9 @@ export default function Content() {
               <p>
                 Jim's passion for helping others led him to pursue a career in
                 healthcare. He has spent over a decade working as a freelance
-                clinical joint manipulation therapist, remedial masseur, and
-                neuromuscular exercise specialist, treating patients with a wide
-                range of conditions.
+                clinical osteopathic Techniques practitioner, remedial masseur,
+                and neuromuscular exercise specialist, treating patients with a
+                wide range of conditions.
               </p>
               <h3 className="font-bold mt-4">A Holistic Approach:</h3>
               <p>

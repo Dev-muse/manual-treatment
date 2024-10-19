@@ -13,71 +13,16 @@
   ```
 */
 
-import Relieved from "@/public/relievedPatient.jpg";
-import Image from "next/image";
-import Link from "next/link";
+import Relieved from '@/public/relievedPatient.jpg';
+import Image from 'next/image';
+import Link from 'next/link';
 
-// export default function Book() {
-//   return (
-//     <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
-//       <div
-//         aria-hidden="true"
-//         className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
-//       >
-//         <div
-//           style={{
-//             clipPath:
-//               "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-//           }}
-//           className="relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]"
-//         />
-//       </div>
-//       <div className="mx-auto max-w-2xl text-center">
-//         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-//           Schedule Your Discovery Call
-//         </h2>
-//         <p className="mt-2 text-lg leading-8 text-gray-600">
-//           Take the first step towards a pain-free life.
-//         </p>
-//         <Image
-//           className="mx-auto my-4"
-//           width={500}
-//           height={250}
-//           src={Relieved}
-//         />
-//         <p className="mt-2 text-lg leading-8 text-gray-600">
-//           Are you ready to experience the transformative power of manual
-//           therapy? Schedule your free discovery call today to learn more about
-//           how our personalized approach can help you:
-//         </p>
-//         <ul>
-//           <li>Reduce chronic pain</li>
-//           <li>Improve mobility</li>
-//           <li>Enhance overall well-being</li>
-//         </ul>
-//         <p className="mt-2 text-lg leading-8 text-gray-600">
-//           During your discovery call, you'll have the opportunity to discuss
-//           your specific needs and goals with one of our experienced
-//           practitioners. We'll answer any questions you may have and help you
-//           determine if manual therapy is the right solution for you.
-//         </p>
-
-//         <Link
-//           className="btn btn-primary mt-6"
-//           href={"https://calendly.com/museabdirahman/30min"}
-//         >
-//           Book Now
-//         </Link>
-//       </div>
-//     </div>
-//   );
-// }
 import {
   CloudArrowUpIcon,
   LockClosedIcon,
   ServerIcon,
-} from "@heroicons/react/20/solid";
-import { MdOutlineHealthAndSafety } from "react-icons/md";
+} from '@heroicons/react/20/solid';
+import { MdOutlineHealthAndSafety } from 'react-icons/md';
 
 export default function Example() {
   return (
@@ -121,7 +66,7 @@ export default function Example() {
                 Booking
               </p>
               <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                Discovery Call{" "}
+                Discovery Call{' '}
               </h1>
               <p className="mt-6 text-xl leading-8 text-gray-700">
                 Take the first step towards a pain-free life.
@@ -141,13 +86,13 @@ export default function Example() {
             <div className="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
               <Link
                 className="btn bg-secondary text-white py-4 px-6 m-6 mx-auto"
-                href={"https://calendly.com/museabdirahman/30min"}
+                href={'https://calendly.com/museabdirahman/30min'}
               >
                 Book Now
               </Link>
               <p>
                 Are you ready to experience the transformative power of manual
-                therapy? Schedule your free discovery call today to learn more
+                medicine? Schedule your free discovery call today to learn more
                 about how our personalized approach can help you:
               </p>
               <ul role="list" className="mt-8 space-y-8 text-gray-600">
@@ -158,7 +103,7 @@ export default function Example() {
                   />
                   <strong className="font-semibold text-gray-900">
                     Reduce chronic pain
-                  </strong>{" "}
+                  </strong>{' '}
                 </li>
                 <li className="flex gap-x-3">
                   <MdOutlineHealthAndSafety
@@ -167,7 +112,7 @@ export default function Example() {
                   />
                   <strong className="font-semibold text-gray-900">
                     Improve mobility
-                  </strong>{" "}
+                  </strong>{' '}
                 </li>
                 <li className="flex gap-x-3">
                   <MdOutlineHealthAndSafety
@@ -176,14 +121,14 @@ export default function Example() {
                   />
                   <strong className="font-semibold text-gray-900">
                     Enhance overall well-being
-                  </strong>{" "}
+                  </strong>{' '}
                 </li>
               </ul>
               <p className="mt-8">
                 During your discovery call, you'll have the opportunity to
                 discuss your specific needs and goals with one of our
                 experienced practitioners. We'll answer any questions you may
-                have and help you determine if manual therapy is the right
+                have and help you determine if Manual medicine is the right
                 solution for you.
               </p>
             </div>
