@@ -6,6 +6,7 @@ import SocialLinkedIn from '@/app/assets/social-linkedin.svg';
 import SocialPin from '@/app/assets/social-pin.svg';
 import SocialYoutube from '@/app/assets/social-youtube.svg';
 import Link from 'next/link';
+import BrandLogo from './BrandLogo';
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
@@ -17,10 +18,10 @@ const Footer = () => {
     <footer className="bg-black text-[#BCBCBC] text-sm py-10 text-center">
       <div className="container">
         <div className="inline-flex relative">
-          <span className="sr-only">Jim jackson - manual-treatment.co.uk</span>
-          <p className=" ">
-            <span className="text-white font-bold">Jim</span> Jackson
-          </p>
+          <span className="sr-only">
+            manual treatment & physical medicine clinic
+          </span>
+          <BrandLogo type={'dark'} />
         </div>
         <nav className="flex flex-col md:flex-row md:justify-center gap-6 mt-6">
           {navigation.map((item) => (

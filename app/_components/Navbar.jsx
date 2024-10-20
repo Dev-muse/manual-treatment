@@ -5,6 +5,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/16/solid';
 import Link from 'next/link';
 import { useState } from 'react';
 import { FiArrowRight, FiArrowUpRight } from 'react-icons/fi';
+import BrandLogo from '@/app/_components/BrandLogo';
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -21,12 +22,13 @@ const Navbar = () => {
         <nav className="flex items-center justify-between" aria-label="Global">
           <div className="flex lg:flex-1">
             <Link href="/" className="-m-1.5 p-1.5">
+              {/* logo */}
               <span className="sr-only">
-                Jim jackson - manual-treatment.co.uk
+                manual treatment & physical medicine clinic
               </span>
-              <p className=" ">
-                <span className="font-bold">Jim</span> Jackson
-              </p>
+              <div className="w-4">
+                <BrandLogo />
+              </div>
             </Link>
           </div>
           <div className="flex lg:hidden">
@@ -65,14 +67,13 @@ const Navbar = () => {
             className="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden"
           >
             <div className="flex items-center justify-between">
-              <a href="#" className="-m-1.5 p-1.5">
+              <Link href="/" className="-m-1.5 p-1.5">
+                {/* mobile logo */}
                 <span className="sr-only">
-                  Jim jackson - manual-treatment.co.uk
+                  manual treatment & physical medicine clinic
                 </span>
-                <p className=" ">
-                  <span className="font-bold">Jim</span> Jackson
-                </p>
-              </a>
+                <BrandLogo />
+              </Link>
               <button
                 type="button"
                 className="-m-2.5 rounded-md p-2.5 text-gray-700"
@@ -90,6 +91,7 @@ const Navbar = () => {
                       key={item.name}
                       href={item.href}
                       className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10"
+                      onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.name}
                     </Link>
@@ -97,8 +99,9 @@ const Navbar = () => {
                 </div>
                 <div className="py-6">
                   <Link
-                    href="/booking"
+                    href="/book"
                     className="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-6 text-secondary hover:bg-gray-400/10"
+                    onClick={() => setMobileMenuOpen(false)}
                   >
                     Get Started
                   </Link>

@@ -85,8 +85,8 @@ export default function Example() {
           <div className="lg:pr-4">
             <div className="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
               <Link
-                className="btn bg-secondary text-white py-4 px-6 m-6 mx-auto"
-                href={'https://calendly.com/museabdirahman/30min'}
+                className="btn bg-secondary text-white py-2 px-8 m-6 mx-auto"
+                href={'https://cal.com/jimjackson/15min'}
               >
                 Book Now
               </Link>
