@@ -26,9 +26,8 @@ const Navbar = () => {
               <span className="sr-only">
                 manual treatment & physical medicine clinic
               </span>
-              <div className="w-4">
-                <BrandLogo />
-              </div>
+
+              <BrandLogo />
             </Link>
           </div>
           <div className="flex lg:hidden">
@@ -67,7 +66,7 @@ const Navbar = () => {
             className="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden"
           >
             <div className="flex items-center justify-between">
-              <Link href="/" className="-m-1.5 p-1.5">
+              <Link href="/" className="-m-1.5 p-1.5 ">
                 {/* mobile logo */}
                 <span className="sr-only">
                   manual treatment & physical medicine clinic

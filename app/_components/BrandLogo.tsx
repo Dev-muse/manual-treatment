@@ -10,7 +10,7 @@ const BrandLogo = ({ type = 'light' }: Props) => {
   if (type == 'light')
     return (
       <svg
-        width={200}
+        width={'75%'}
         viewBox="0 0 1500 439"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -120,6 +120,7 @@ const BrandLogo = ({ type = 'light' }: Props) => {
   if (type == 'dark')
     return (
       <svg
+        className="w-100"
         width={200}
         viewBox="0 0 1500 439"
         fill="none"
