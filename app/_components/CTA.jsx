@@ -1,10 +1,10 @@
-import MasssageImage from "@/public/cta-image.jpg";
-import Image from "next/image";
-import Link from "next/link";
-import BookButton from "./BookButton";
+import MasssageImage from '@/public/cta-image.jpg';
+import Image from 'next/image';
+import Link from 'next/link';
+import BookButton from './BookButton';
 
 export default function CTA() {
-  const currentColor = "#facc15";
+  const currentColor = '#facc15';
   return (
     <div className="bg-white">
       <div className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
@@ -46,7 +46,7 @@ export default function CTA() {
               src={MasssageImage}
               width={1824}
               height={1080}
-              className="absolute left-0 top-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10"
+              className="lg:absolute left-0 top-0 w-full lg:w-[57rem]  max-w-none rounded-md bg-white/5 ring-1 ring-white/10"
             />
           </div>
         </div>
