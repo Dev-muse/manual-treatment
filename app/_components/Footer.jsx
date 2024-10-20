@@ -13,6 +13,7 @@ const navigation = [
   { name: 'Treatments', href: '/treatments' },
   { name: 'Contact', href: '/book' },
 ];
+let year = new Date().getFullYear();
 const Footer = () => {
   return (
     <footer className="bg-black text-[#BCBCBC] text-sm py-10 text-center">
@@ -38,7 +39,8 @@ const Footer = () => {
           <SocialYoutube />
         </div>
         <p className="mt-6">
-          &copy; 2024 Manual Therapy, Inc. All rights reserved.
+          &copy; {year} Manual treatment & physical medicine clinic, All rights
+          reserved.
         </p>
       </div>
     </footer>
