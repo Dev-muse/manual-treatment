@@ -28,10 +28,13 @@ export default function Hero() {
             </span>{' '}
             Better.
           </h1>
-          <p className="mt-6 text-lg leading-8 text-gray-500 text-md ">
+          <p className="mt-6 text-lg text-center leading-8 text-gray-500 text-md ">
             Hippocrates, often called the Father of Medicine, asserts that
-            <strong> "movement is medicine."</strong> Manual medicine can help
-            you regain control of your body and rediscover your active life.
+            <strong>"movement is medicine"</strong>. At Manual Treatment and
+            Physical Medicine Clinic, we specialise in Manual medicine to help
+            restore balance and alignment within your body. Let us guide you
+            towards pain-free movement, improved mobility, and lasting health &
+            wellness.
           </p>
           {/* cta */}
           <BookButton dark={false} />
