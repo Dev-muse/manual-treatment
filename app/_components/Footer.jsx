@@ -11,6 +11,7 @@ const navigation = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
   { name: 'Treatments', href: '/treatments' },
+  { name: 'Pricing', href: '/pricing' },
   { name: 'Contact', href: '/book' },
 ];
 let year = new Date().getFullYear();
