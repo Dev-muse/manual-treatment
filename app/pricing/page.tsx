@@ -31,7 +31,7 @@ const tiers = [
     mostPopular: false,
   },
   {
-    name: "Deep Tissue Massage",
+    name: "Medical Deep Tissue Massage",
     id: "tier-massage",
     href: "https://cal.com/jimjackson/15min",
     price: "£100",
