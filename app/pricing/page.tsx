@@ -69,18 +69,31 @@ export default function OsteoPricing() {
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="text-base font-semibold text-secondary">Pricing</h2>
           <p className="mt-2 text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
-           Your Hour of Healing Starts Here
+            Your Hour of Healing Starts Here
           </p>
         </div>
-        <p className="mx-auto mt-6 max-w-2xl text-center text-base text-gray-600 sm:text-xl">
-          All patients are required to complete a reassessment every 3 months.
-          Price: <strong className="text-primary">£100</strong>
-          <br />
-          <small className="text-center">
-            All sessions include a consultation covering your full medical
-            history
-          </small>
-        </p>
+        <div className="mx-auto mt-6 max-w-2xl text-center text-base text-gray-600 sm:text-xl">
+          <p className="mb-4">
+            Please be advised that any patient who has not attended the clinic
+            for a period of three months or more will be required to undergo a
+            full reassessment before resuming treatment. This is to ensure we
+            have an up-to-date understanding of their condition and can deliver
+            the most appropriate and effective clinical care.
+          </p>
+          <p className="mb-2 font-semibold text-primary">
+            Reassessment process includes:
+          </p>
+          <ul className="list-disc list-inside text-left text-base sm:text-lg mx-auto max-w-md">
+            <li>
+              <strong>Consultation – £35</strong>: A review of your medical
+              history, current symptoms, and any changes since your last visit.
+            </li>
+            <li>
+              <strong>Treatment Session – £100</strong>: A personalised
+              treatment based on your updated clinical needs and condition.
+            </li>
+          </ul>
+        </div>
 
         <div className="mx-auto mt-12 grid max-w-md grid-cols-1 gap-8 md:max-w-2xl md:grid-cols-2 lg:max-w-4xl xl:grid-cols-4">
           {tiers.map((tier) => (
@@ -95,7 +108,8 @@ export default function OsteoPricing() {
             >
               <h3
                 id={tier.id}
-                className={ "group-hover:text-secondary text-gray-900 text-lg font-semibold"
+                className={
+                  "group-hover:text-secondary text-gray-900 text-lg font-semibold"
                 }
               >
                 {tier.name}
@@ -108,7 +122,7 @@ export default function OsteoPricing() {
                 href={tier.href}
                 aria-describedby={tier.id}
                 className={classNames(
-                "hover:bg-secondary hover:text-white  text-primary ring-1 ring-indigo-200 hover:ring-seondary",
+                  "hover:bg-secondary hover:text-white  text-primary ring-1 ring-indigo-200 hover:ring-seondary",
                   "mt-6 block rounded-md px-3 py-2 text-center text-sm font-semibold ring-inset"
                 )}
               >
