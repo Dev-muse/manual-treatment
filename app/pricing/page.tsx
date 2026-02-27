@@ -7,7 +7,7 @@ const tiers = [
     name: "Osteopathic Techniques",
     id: "tier-osteo",
     href: "https://cal.com/jimjackson/15min",
-    price: "£100",
+    price: "£110",
     description: "Full 1-hour session including consultation.",
     features: [
       "Joint manipulation (nerve release)",
@@ -20,7 +20,7 @@ const tiers = [
     name: "Trigger Point Therapy",
     id: "tier-trigger",
     href: "https://cal.com/jimjackson/15min",
-    price: "£100",
+    price: "£110",
     description:
       "Full 1-hour session. Acupressure-inspired relief for muscular tension.",
     features: [
@@ -34,7 +34,7 @@ const tiers = [
     name: "Medical Deep Tissue Massage",
     id: "tier-massage",
     href: "https://cal.com/jimjackson/15min",
-    price: "£100",
+    price: "£110",
     description: "Therapeutic 1-hour massage with full consultation.",
     features: [
       "Fascial sliding massage",
@@ -47,7 +47,7 @@ const tiers = [
     name: "Neuromuscular Activation",
     id: "tier-nm-activation",
     href: "https://cal.com/jimjackson/15min",
-    price: "£100",
+    price: "£110",
     description: "1-hour session combining therapy & guided exercise.",
     features: [
       "Sit-to-stand intervention",
@@ -89,7 +89,7 @@ export default function OsteoPricing() {
               history, current symptoms, and any changes since your last visit.
             </li>
             <li>
-              <strong>Treatment Session – £100</strong>: A personalised
+              <strong>Treatment Session – £110</strong>: A personalised
               treatment based on your updated clinical needs and condition.
             </li>
           </ul>
