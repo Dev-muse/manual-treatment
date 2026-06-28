@@ -1,3 +1,4 @@
+// app/(site)/layout.tsx
 import type { Metadata } from "next";
 import { Poppins, Playfair_Display } from "next/font/google";
 import "./globals.css";
@@ -12,12 +13,14 @@ const poppins = Poppins({
   variable: "--font-poppins",
   weight: ["200", "400", "600", "800"],
 });
+
 const playfair = Playfair_Display({
   subsets: ["latin"],
   style: "italic",
   variable: "--font-playfair",
   weight: ["400", "600", "800"],
 });
+
 export const metadata: Metadata = {
   title:
     "Manual Treatment and Physical Medicine Clinic | Pain Relief, Recovery, and Wellness",
@@ -27,19 +30,17 @@ export const metadata: Metadata = {
     "manual therapy, physical medicine, pain relief, osteopathy, sports injuries, back pain, neck pain, arthritis, rehabilitation, wellness",
 };
 
-export default function RootLayout({
+export default function SiteLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="en">
-      <body className={`${playfair.variable}  ${poppins.variable} font-sans`}>
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
-      </body>
+    <div className={`${poppins.variable} ${playfair.variable} font-sans antialiased`}>
+      <Navbar />
+      <main>{children}</main>
+      <Footer />
       <GoogleAnalytics gaId="G-31M39NLFPP" />
-    </html>
-  );
+    </div>
+  )
 }
