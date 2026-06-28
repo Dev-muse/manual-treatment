@@ -1,6 +1,6 @@
 import React from "react";
-import Remedies from "../_components/Remedies";
-import Clients from "../_components/Clients";
+import Remedies from "@/app/_components/Remedies";
+import Clients from "@/app/_components/Clients";
 
 const Treaments = () => {
   return (
