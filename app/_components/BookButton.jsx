@@ -15,7 +15,7 @@ const BookButton = ({ dark }) => {
         href="/book"
         className="rounded-md inline-flex items-center gap-2 bg-secondary px-3.5 py-2.5 text-base font-semibold leading-7 text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
       >
-        Schedule Your FREE Consultation <FiArrowUpRight size={25} />
+        Schedule Your Consultation <FiArrowUpRight size={25} />
       </Link>
 
       <div className="flex items-center">
