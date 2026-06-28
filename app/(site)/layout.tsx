@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Poppins, Playfair_Display } from "next/font/google";
 import "./globals.css";
-import Navbar from "./_components/Navbar";
+import Navbar from "@/app/_components/Navbar";
+import Footer from "@/app/_components/Footer";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Footer from "./_components/Footer";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
 const poppins = Poppins({
