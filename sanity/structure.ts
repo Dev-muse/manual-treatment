@@ -10,7 +10,7 @@ export const structure: StructureResolver = (S) =>
         .id(HOMEPAGE_ID)
         .title('Homepage')
         .child(
-          S.documentPane()
+          S.document()
             .schemaType('homePage')
             .documentId(HOMEPAGE_ID)
         ),
