@@ -38,14 +38,14 @@ export default async function Home() {
         descriptionText={pageData.clientsDescription}
         testimonialsData={testimonials}
       />
-      {/* <FAQs 
+      <FAQs 
         items={faqs}
       />
       <CTA 
         heading={pageData.ctaHeading}
         description={pageData.ctaDescription}
         image={pageData.ctaImage}
-      /> */}
+      />
     </>
   );
 }

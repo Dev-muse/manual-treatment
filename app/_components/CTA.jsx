@@ -1,10 +1,9 @@
-import MasssageImage from '@/public/cta-image.jpg';
+import { urlFor } from '@/sanity/lib/image';
 import Image from 'next/image';
 import Link from 'next/link';
 import BookButton from './BookButton';
 
-export default function CTA() {
-  const currentColor = '#facc15';
+export default function CTA({ heading, description, image }) {
   return (
     <div className="bg-white">
       <div className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
@@ -30,25 +29,24 @@ export default function CTA() {
           </svg>
           <div className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Ready To <span className="font-serif">Reclaim</span> Your Body?
+              {heading || 'Ready To Reclaim Your Body?'}
             </h2>
             <p className="mt-6 text-md leading-8 text-gray-300">
-              Don't let pain hold you back any longer. Schedule your free
-              consultation today and discover how manual therapy can transform
-              your life. Our experienced practitioners are committed to helping
-              you achieve lasting relief and regain your mobility.
+              {description || "Don't let pain hold you back any longer. Schedule your free consultation today and discover how manual therapy can transform your life. Our experienced practitioners are committed to helping you achieve lasting relief and regain your mobility."}
             </p>
             <BookButton dark={true} />
           </div>
-          <div className="relative mt-16 h-80 lg:mt-8">
-            <Image
-              alt="App screenshot"
-              src={MasssageImage}
-              width={1824}
-              height={1080}
-              className="lg:absolute left-0 top-0 w-full lg:w-[57rem]  max-w-none rounded-md bg-white/5 ring-1 ring-white/10"
-            />
-          </div>
+          {image && (
+            <div className="relative mt-16 h-80 lg:mt-8">
+              <Image
+                alt="CTA image"
+                src={urlFor(image).url()}
+                width={1824}
+                height={1080}
+                className="lg:absolute left-0 top-0 w-full lg:w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10"
+              />
+            </div>
+          )}
         </div>
       </div>
     </div>
