@@ -85,19 +85,17 @@ const Testimonials = ({ items }: TestimonialsProps) => {
   return (
     <section className="bg-white">
       <div className="container">
-        <div className="flex justify-center gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[738px] overflow-hidden">
+        {/* Mobile & tablet: single responsive column with all items */}
+        <div className="mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[738px] overflow-hidden lg:hidden">
+          <TestimonialsColumn items={items} duration={20} />
+        </div>
+        {/* lg and above: three-column distributed layout */}
+        <div className="mt-10 hidden [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[738px] overflow-hidden lg:flex justify-center gap-6">
           {columns.map((column, idx) => (
             <TestimonialsColumn
               key={idx}
               items={column}
               duration={durations[idx]}
-              className={
-                idx === 0
-                  ? undefined
-                  : idx === 1
-                    ? "hidden md:block"
-                    : "hidden lg:block"
-              }
             />
           ))}
         </div>
