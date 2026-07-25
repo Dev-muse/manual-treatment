@@ -6,10 +6,14 @@ export const structure: StructureResolver = (S) =>
   S.list()
     .title('Content')
     .items([
-      S.documentListItem()
-        .schemaType('homePage')
-        .documentId(HOMEPAGE_ID)
-        .title('Homepage'),
+      S.listItem()
+        .id(HOMEPAGE_ID)
+        .title('Homepage')
+        .child(
+          S.documentPane()
+            .schemaType('homePage')
+            .documentId(HOMEPAGE_ID)
+        ),
       ...S.documentTypeListItems().filter(
         (item) => item.getId() !== 'homePage'
       ),
