@@ -7,6 +7,7 @@ import Footer from "@/app/_components/Footer";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { SanityLive } from "@/sanity/lib/live";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -41,6 +42,7 @@ export default function SiteLayout({
       <main>{children}</main>
       <Footer />
       <GoogleAnalytics gaId="G-31M39NLFPP" />
+      <SanityLive />
     </div>
   )
 }

@@ -71,25 +71,35 @@ const Testimonials = ({ items }: TestimonialsProps) => {
     return null;
   }
 
-  const firstColumn = items.slice(0, 3);
-  const secondColumn = items.slice(3, 6);
-  const thirdColumn = items.slice(6, 9);
+  const columnCount = 3;
+  const columns: TestimonialItem[][] = Array.from(
+    { length: columnCount },
+    () => []
+  );
+  items.forEach((item, index) => {
+    columns[index % columnCount].push(item);
+  });
+
+  const durations = [20, 22, 25];
 
   return (
     <section className="bg-white">
       <div className="container">
         <div className="flex justify-center gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[738px] overflow-hidden">
-          <TestimonialsColumn items={firstColumn} duration={20} />
-          <TestimonialsColumn
-            items={secondColumn}
-            className="hidden md:block"
-            duration={22}
-          />
-          <TestimonialsColumn
-            items={thirdColumn}
-            className="hidden lg:block"
-            duration={25}
-          />
+          {columns.map((column, idx) => (
+            <TestimonialsColumn
+              key={idx}
+              items={column}
+              duration={durations[idx]}
+              className={
+                idx === 0
+                  ? undefined
+                  : idx === 1
+                    ? "hidden md:block"
+                    : "hidden lg:block"
+              }
+            />
+          ))}
         </div>
       </div>
     </section>
