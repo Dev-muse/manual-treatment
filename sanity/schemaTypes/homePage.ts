@@ -11,16 +11,34 @@ export const homePage = {
       type: 'string', // "Chronic Pain Holding You Back?"
     },
     {
-      name: 'heroHeading',
-      title: 'Hero Main Headline',
-      type: 'string',
-      description: 'e.g. "Move Better, Feel Better,"',
-    },
-    {
-      name: 'heroHeadingAccent',
-      title: 'Hero Headline Accent (serif italic)',
-      type: 'string',
-      description: 'Displays in serif italic after the main headline. e.g. "Live Better."',
+      name: 'heroHeadingParts',
+      title: 'Hero Headline',
+      type: 'array',
+      description: 'Add each word or phrase as a separate item. Toggle "Serif italic" on the words that should appear coloured and styled.',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            {
+              name: 'text',
+              title: 'Word or Phrase',
+              type: 'string',
+            },
+            {
+              name: 'accent',
+              title: 'Serif italic (coloured)',
+              type: 'boolean',
+              initialValue: false,
+            },
+          ],
+          preview: {
+            select: { title: 'text', accent: 'accent' },
+            prepare({ title, accent }: { title: string; accent: boolean }) {
+              return { title: title || '(empty)', subtitle: accent ? '✦ serif italic' : '' }
+            },
+          },
+        },
+      ],
     },
     {
       name: 'heroDescription',
@@ -36,16 +54,40 @@ export const homePage = {
       type: 'string', // "Remedies"
     },
     {
-      name: 'remediesHeading',
+      name: 'remediesHeadingParts',
       title: 'Remedies Heading',
-      type: 'string',
-      description: 'e.g. "Don\'t let pain"',
-    },
-    {
-      name: 'remediesHeadingAccent',
-      title: 'Remedies Heading Accent (serif)',
-      type: 'string',
-      description: 'Displays in serif colour on a new line. e.g. "Hold You Back"',
+      type: 'array',
+      description: 'Add each word or phrase as a separate item. Toggle "Serif" on the words that should appear coloured.',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            {
+              name: 'text',
+              title: 'Word or Phrase',
+              type: 'string',
+            },
+            {
+              name: 'accent',
+              title: 'Serif (coloured)',
+              type: 'boolean',
+              initialValue: false,
+            },
+            {
+              name: 'newLine',
+              title: 'Start on new line',
+              type: 'boolean',
+              initialValue: false,
+            },
+          ],
+          preview: {
+            select: { title: 'text', accent: 'accent' },
+            prepare({ title, accent }: { title: string; accent: boolean }) {
+              return { title: title || '(empty)', subtitle: accent ? '✦ serif' : '' }
+            },
+          },
+        },
+      ],
     },
     {
       name: 'remediesDescription',

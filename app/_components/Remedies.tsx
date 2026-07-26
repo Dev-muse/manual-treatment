@@ -9,10 +9,15 @@ interface ConditionItem {
   description: string;
 }
 
+interface HeadingPart {
+  text: string;
+  accent: boolean;
+  newLine?: boolean;
+}
+
 interface RemediesProps {
   eyebrow?: string;
-  heading?: string;
-  headingAccent?: string;
+  headingParts?: HeadingPart[];
   description?: string;
   listTitle?: string;
   videoPoster?: any;
@@ -33,8 +38,7 @@ const DEFAULT_CONDITIONS: ConditionItem[] = [
 
 export default function Remedies({
   eyebrow = "Remedies",
-  heading,
-  headingAccent,
+  headingParts,
   description,
   listTitle,
   videoPoster,
@@ -60,13 +64,17 @@ export default function Remedies({
               <Eyebrow text={eyebrow} position="start" />
               
               <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                {heading ? (
-                  <>
-                    {heading}
-                    {headingAccent && (
-                      <><br /><span className="font-serif text-primary">{headingAccent}</span></>
-                    )}
-                  </>
+                {headingParts && headingParts.length > 0 ? (
+                  headingParts.map((part, i) => (
+                    <React.Fragment key={i}>
+                      {part.newLine && <br />}
+                      {part.accent ? (
+                        <span className="font-serif text-primary">{part.text} </span>
+                      ) : (
+                        <span>{part.text} </span>
+                      )}
+                    </React.Fragment>
+                  ))
                 ) : (
                   <>
                     Don&apos;t let pain <br />

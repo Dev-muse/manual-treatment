@@ -4,14 +4,18 @@ import Eyebrow from './Eyebrow';
 import LogoTicker from './LogoTicker';
 import Slider from './Slider';
 
+interface HeadingPart {
+  text: string;
+  accent: boolean;
+}
+
 interface HeroProps {
   eyebrow?: string;
-  heading?: string;
-  headingAccent?: string;
+  headingParts?: HeadingPart[];
   description?: string;
 }
 
-export default function Hero({ eyebrow, heading, headingAccent, description }: HeroProps) {
+export default function Hero({ eyebrow, headingParts, description }: HeroProps) {
   return (
     <section className="relative px-6 lg:px-8">
       <div className="mx-auto max-w-2xl pt-8 pb-4">
@@ -23,13 +27,14 @@ export default function Hero({ eyebrow, heading, headingAccent, description }: H
           )}
           
           <h1 className="text-6xl font-semibold tracking-normal text-gray-900 sm:text-6xl">
-            {heading ? (
-              <>
-                {heading}{' '}
-                {headingAccent && (
-                  <span className="font-serif italic font-bold text-primary">{headingAccent}</span>
-                )}
-              </>
+            {headingParts && headingParts.length > 0 ? (
+              headingParts.map((part, i) =>
+                part.accent ? (
+                  <span key={i} className="font-serif italic font-bold text-primary">{part.text} </span>
+                ) : (
+                  <span key={i}>{part.text} </span>
+                )
+              )
             ) : (
               <>
                 <span className="font-serif italic font-bold text-primary">Move </span> Better,{' '}

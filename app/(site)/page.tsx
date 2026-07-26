@@ -22,14 +22,12 @@ export default async function Home() {
     <>
       <Hero 
         eyebrow={pageData.heroEyebrow}
-        heading={pageData.heroHeading}
-        headingAccent={pageData.heroHeadingAccent}
+        headingParts={pageData.heroHeadingParts}
         description={pageData.heroDescription}
       />
       <Remedies 
         eyebrow={pageData.remediesEyebrow}
-        heading={pageData.remediesHeading}
-        headingAccent={pageData.remediesHeadingAccent}
+        headingParts={pageData.remediesHeadingParts}
         description={pageData.remediesDescription}
         listTitle={pageData.remediesListTitle}
         videoPoster={pageData.remediesVideoPoster}

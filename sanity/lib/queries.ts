@@ -4,12 +4,10 @@ import { defineQuery } from 'next-sanity'
 export const HOME_PAGE_QUERY = defineQuery(`{
   "pageData": *[_type == "homePage"][0] {
     heroEyebrow,
-    heroHeading,
-    heroHeadingAccent,
+    "heroHeadingParts": heroHeadingParts[] { text, accent },
     heroDescription,
     remediesEyebrow,
-    remediesHeading,
-    remediesHeadingAccent,
+    "remediesHeadingParts": remediesHeadingParts[] { text, accent, newLine },
     remediesDescription,
     remediesListTitle,
     remediesVideoPoster,
@@ -40,12 +38,10 @@ export const HOME_PAGE_QUERY = defineQuery(`{
 export interface HomePageData {
   pageData: {
     heroEyebrow?: string
-    heroHeading?: string
-    heroHeadingAccent?: string
+    heroHeadingParts?: Array<{ text: string; accent: boolean }>
     heroDescription?: string
     remediesEyebrow?: string
-    remediesHeading?: string
-    remediesHeadingAccent?: string
+    remediesHeadingParts?: Array<{ text: string; accent: boolean; newLine?: boolean }>
     remediesDescription?: string
     remediesListTitle?: string
     remediesVideoPoster?: any
