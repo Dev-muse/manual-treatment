@@ -13,8 +13,14 @@ export const homePage = {
     {
       name: 'heroHeading',
       title: 'Hero Main Headline',
-      type: 'string', // "Move Better, Feel Better, Live Better."
-      description: 'Use clear spacing or characters if separating lines',
+      type: 'string',
+      description: 'e.g. "Move Better, Feel Better,"',
+    },
+    {
+      name: 'heroHeadingAccent',
+      title: 'Hero Headline Accent (serif italic)',
+      type: 'string',
+      description: 'Displays in serif italic after the main headline. e.g. "Live Better."',
     },
     {
       name: 'heroDescription',
@@ -32,7 +38,14 @@ export const homePage = {
     {
       name: 'remediesHeading',
       title: 'Remedies Heading',
-      type: 'string', // "Don't let pain Hold You Back"
+      type: 'string',
+      description: 'e.g. "Don\'t let pain"',
+    },
+    {
+      name: 'remediesHeadingAccent',
+      title: 'Remedies Heading Accent (serif)',
+      type: 'string',
+      description: 'Displays in serif colour on a new line. e.g. "Hold You Back"',
     },
     {
       name: 'remediesDescription',

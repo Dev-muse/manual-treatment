@@ -12,6 +12,7 @@ interface ConditionItem {
 interface RemediesProps {
   eyebrow?: string;
   heading?: string;
+  headingAccent?: string;
   description?: string;
   listTitle?: string;
   videoPoster?: any;
@@ -33,6 +34,7 @@ const DEFAULT_CONDITIONS: ConditionItem[] = [
 export default function Remedies({
   eyebrow = "Remedies",
   heading,
+  headingAccent,
   description,
   listTitle,
   videoPoster,
@@ -58,7 +60,14 @@ export default function Remedies({
               <Eyebrow text={eyebrow} position="start" />
               
               <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                {heading || (
+                {heading ? (
+                  <>
+                    {heading}
+                    {headingAccent && (
+                      <><br /><span className="font-serif text-primary">{headingAccent}</span></>
+                    )}
+                  </>
+                ) : (
                   <>
                     Don&apos;t let pain <br />
                     <span className="font-serif text-primary">Hold You Back</span>

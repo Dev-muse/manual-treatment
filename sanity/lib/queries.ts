@@ -5,9 +5,11 @@ export const HOME_PAGE_QUERY = defineQuery(`{
   "pageData": *[_type == "homePage"][0] {
     heroEyebrow,
     heroHeading,
+    heroHeadingAccent,
     heroDescription,
     remediesEyebrow,
     remediesHeading,
+    remediesHeadingAccent,
     remediesDescription,
     remediesListTitle,
     remediesVideoPoster,
@@ -39,9 +41,11 @@ export interface HomePageData {
   pageData: {
     heroEyebrow?: string
     heroHeading?: string
+    heroHeadingAccent?: string
     heroDescription?: string
     remediesEyebrow?: string
     remediesHeading?: string
+    remediesHeadingAccent?: string
     remediesDescription?: string
     remediesListTitle?: string
     remediesVideoPoster?: any

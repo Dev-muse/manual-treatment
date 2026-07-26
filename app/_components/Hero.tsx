@@ -7,10 +7,11 @@ import Slider from './Slider';
 interface HeroProps {
   eyebrow?: string;
   heading?: string;
+  headingAccent?: string;
   description?: string;
 }
 
-export default function Hero({ eyebrow, heading, description }: HeroProps) {
+export default function Hero({ eyebrow, heading, headingAccent, description }: HeroProps) {
   return (
     <section className="relative px-6 lg:px-8">
       <div className="mx-auto max-w-2xl pt-8 pb-4">
@@ -23,10 +24,13 @@ export default function Hero({ eyebrow, heading, description }: HeroProps) {
           
           <h1 className="text-6xl font-semibold tracking-normal text-gray-900 sm:text-6xl">
             {heading ? (
-              // If the user provided a heading, render it dynamically
-              heading
+              <>
+                {heading}{' '}
+                {headingAccent && (
+                  <span className="font-serif italic font-bold text-primary">{headingAccent}</span>
+                )}
+              </>
             ) : (
-              // Fallback default text if Sanity is empty
               <>
                 <span className="font-serif italic font-bold text-primary">Move </span> Better,{' '}
                 <span className="font-serif italic font-bold text-primary">Feel </span> Better,{' '}
