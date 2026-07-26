@@ -1,6 +1,6 @@
 import React from "react";
 import Meet from "@/app/_components/Meet";
-import BookButton from "../_components/BookButton";
+import BookButton from "@/app/_components/BookButton";
 import Content from "@/app/_components/Content";
 
 const About = () => {

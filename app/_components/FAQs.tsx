@@ -5,7 +5,12 @@ import { useState } from 'react';
 import { FaMinus, FaPlus } from 'react-icons/fa';
 import { AnimatePresence, motion } from 'framer-motion';
 
-const items = [
+interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+const DEFAULT_FAQS: FaqItem[] = [
   {
     question: 'What is manual medicine?',
     answer:
@@ -38,7 +43,7 @@ const items = [
   },
 ];
 
-const AccordionItem = ({ question, answer }) => {
+const AccordionItem = ({ question, answer }: { question: string; answer: string }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div
@@ -64,7 +69,12 @@ const AccordionItem = ({ question, answer }) => {
   );
 };
 
-const FAQs = () => {
+interface FAQsProps {
+  items?: FaqItem[];
+}
+
+const FAQs = ({ items }: FAQsProps) => {
+  const faqs = items && items.length > 0 ? items : DEFAULT_FAQS;
   return (
     <section className="bg-white text-white bg-gradient-to-b from-[#3889a4] to-black py-[72px] sm:py-24 ">
       <div className="container">
@@ -72,7 +82,7 @@ const FAQs = () => {
           Frequently Asked <span className="font-serif">Questions</span>
         </h2>
         <div className="mt-12 max-w-[648px] mx-auto">
-          {items.map(({ question, answer }, index) => (
+          {faqs.map(({ question, answer }, index) => (
             <AccordionItem key={index} question={question} answer={answer} />
           ))}
         </div>
