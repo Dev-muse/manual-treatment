@@ -15,6 +15,39 @@ interface TestimonialsProps {
   items: TestimonialItem[];
 }
 
+const DEFAULT_TESTIMONIALS: TestimonialItem[] = [
+  {
+    name: 'Sharon Chung',
+    username: 'Stroke Survivor',
+    text: 'After my stroke, I struggled with mobility and chronic pain. The manual therapy here gave me my life back. I can now walk without assistance and enjoy activities I thought were gone forever.',
+  },
+  {
+    name: 'James O\'Brien',
+    username: 'Retired Teacher',
+    text: 'I had been suffering from debilitating back pain for years. After just a few sessions, the difference was remarkable. I highly recommend this clinic to anyone dealing with chronic pain.',
+  },
+  {
+    name: 'Maria Santos',
+    username: 'Marathon Runner',
+    text: 'A sports injury had me sidelined for months. The team here got me back on my feet faster than I thought possible. Their expertise in manual therapy is second to none.',
+  },
+  {
+    name: 'David Okafor',
+    username: 'Office Worker',
+    text: 'Years of desk work left me with terrible neck and shoulder tension. The treatment plan here has completely transformed how I feel day to day. I only wish I had come sooner.',
+  },
+  {
+    name: 'Linda Walsh',
+    username: 'Arthritis Patient',
+    text: 'Living with arthritis was becoming unbearable. The gentle but effective manual therapy sessions have dramatically reduced my pain levels and improved my range of motion.',
+  },
+  {
+    name: 'Tom Byrne',
+    username: 'Gym Enthusiast',
+    text: 'I came in with a persistent knee injury that wouldn\'t heal. The thorough assessment and targeted treatment plan had me back training within weeks. Outstanding care.',
+  },
+];
+
 const TestimonialCard = ({ text, image, name, username }: TestimonialItem) => (
   <div className="card w-[320px] flex-shrink-0 mx-3">
     <div>{text}</div>
@@ -39,16 +72,17 @@ const TestimonialCard = ({ text, image, name, username }: TestimonialItem) => (
 );
 
 const Testimonials = ({ items }: TestimonialsProps) => {
-  if (!items || items.length === 0) return null;
+  const activeItems = items && items.length > 0 ? items : DEFAULT_TESTIMONIALS;
 
-  // Duplicate items so the marquee loops seamlessly
-  const track = [...items, ...items];
+  // Duplicate so the marquee loops seamlessly
+  const track = [...activeItems, ...activeItems];
 
   return (
-    <section className="bg-white">
-      <div className="mt-10 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+    <section className="bg-white py-4">
+      <div className="overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
         <motion.div
           className="flex"
+          initial={{ translateX: '0%' }}
           animate={{ translateX: '-50%' }}
           transition={{
             duration: 30,
