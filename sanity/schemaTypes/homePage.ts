@@ -3,10 +3,6 @@ export const homePage = {
   name: 'homePage',
   title: 'Homepage Content',
   type: 'document',
-  documentActions: ['update', 'publish'],
-  newDocumentOptions: {
-    singleton: 'homepage',
-  },
   fields: [
     // --- HERO SECTION ---
     {
